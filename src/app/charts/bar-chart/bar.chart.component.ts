@@ -6,7 +6,7 @@ import { BarChartModel, BarChartDataModel } from '../models/index';
   templateUrl: './bar.chart.component.html'
 })
 export class BarChartComponent {
-  @Input() config: BarChartModel = new BarChartModel();
+  config: BarChartModel = new BarChartModel();
   public options: any = this.config.options;
   public labels: string[] = this.config.labels;
   public type: string = this.config.type;
