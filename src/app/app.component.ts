@@ -8,7 +8,7 @@ import { BarChartDataModel } from './charts/models/index';
 })
 
 export class AppComponent {
-  barChartData: BarChartDataModel[] = [new BarChartDataModel('X'), new BarChartDataModel('Series B', [44, 45, 66])];
+  barChartData: BarChartDataModel[] = [new BarChartDataModel('X'), new BarChartDataModel('Series B')];
 
   update() {
     this.barChartData = [

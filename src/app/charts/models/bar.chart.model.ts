@@ -4,7 +4,7 @@ export class BarChartDataModel {
 
     constructor(label?: string, data?: number[]) {
         this.label = label || 'Series A';
-        this.data = data && data.length ? data :[65, 59, 80, 81, 56, 55, 40];
+        this.data = data && data.length ? data :[];
     }
 }
 export class BarChartModel {
