@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { BarChartDataModel } from './charts/models/index';
 
 @Component({
@@ -6,16 +6,14 @@ import { BarChartDataModel } from './charts/models/index';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
-  barChartData: BarChartDataModel[] = [new BarChartDataModel(), new BarChartDataModel('Series B', [44,45,66])];
 
-  ngOnInit() {
-  }
+export class AppComponent {
+  barChartData: BarChartDataModel[] = [new BarChartDataModel('X'), new BarChartDataModel('Series B', [44, 45, 66])];
 
   update() {
     this.barChartData = [
       new BarChartDataModel('Series A', [88, 22, 80, 81, 56, 55, 40]),
-      new BarChartDataModel('Series B', [28, 48, 40, 19, 86, 27, 90]),
+      new BarChartDataModel('Series C', [84, 22, 96, 19, 86, 27, 90])
     ];
   }
 }

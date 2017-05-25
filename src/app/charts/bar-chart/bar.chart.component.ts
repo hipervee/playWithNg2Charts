@@ -12,28 +12,4 @@ export class BarChartComponent {
   public type: string = this.config.type;
   public legend: boolean = this.config.legend;
   @Input() data: BarChartDataModel[] = this.config.data;
-
-  // events
-  public chartClicked(e: any): void {
-    console.log(e);
-  }
-
-  public chartHovered(e: any): void {
-    console.log(e);
-  }
-
-  ngOnChanges(changes: SimpleChanges) {
-    let previousValue = <BarChartDataModel[]>changes['data'].previousValue;
-    let currentValue = <BarChartDataModel[]>changes['data'].currentValue;
-
-    if (previousValue) {
-      previousValue.forEach(dataModel => {
-        let data = currentValue.filter(item => item.label == dataModel.label);
-
-        if (data.length != 0) {
-          dataModel.data = data[0].data;
-        }
-      });
-    }
-  }
 }
